@@ -23,8 +23,8 @@ Run following commands in Root user mode.
 |```cd Lucene-Search-Engine/``` | Go to the directory to get started|
 |```mvn package```| This command builds the maven project and packages them into a JAR, it will create a jar named "LuceneSE-0.0.1-SNAPSHOT.jar" compiled java file to execute different Analyzers and scoring functions|
 |```./target/LuceneSE-0.0.1-SNAPSHOT.jar```|To execute jar file|
-|Choose Analyzer|1. English Analyzer|
-|Choose Scoring Model|1. BM25 |
+|Choose Analyzer|1. English Analyzer  2. Standard Analyzer  3. Simple Analyzer|
+|Choose Scoring Model|1. BM25  2. Vector Space Model|
 |comment|It  will create results.txt file in path Lucene-Search-Engine/src/results.txt|
 |```tar -xvzf trec_eval_latest.tar.gz```| Unzip trec_eval files|
 |```cd trec_eval-9.0.7/```| change directory|
