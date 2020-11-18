@@ -10,10 +10,10 @@ Following are the steps need to be followed after successfull access to my EC2 I
 If not then 
 Run - git clone https://github.com/siddhesh21/Lucene-Search-Engine.git
 
-Make sure to have following pre-installed
-Latest Java version (at the moment):  
+**Make sure to have following pre-installed**
+- Latest Java version (at the moment):  
 Run - yum install -y java-1.8.0-openjdk-devel.x86_64
-Latest Maven (at the moment):
+- Latest Maven (at the moment):
 Run - yum install -y apache-maven
 
 Run following commands in Root user mode.
