@@ -28,7 +28,7 @@ Run following commands in Root user mode.
 |comment|It  will create results.txt file in path Lucene-Search-Engine/src/results.txt|
 |```tar -xvzf trec_eval_latest.tar.gz```| Unzip trec_eval files|
 |```cd trec_eval-9.0.7/```| change directory|
-|make|Use it to describe any task where some files must be updated automatically from others whenever the others change.| 
+|```make```|Use it to describe any task where some files must be updated automatically from others whenever the others change.| 
 |```ls -lrt trec*```|To see descriptive list of created trec_eval file to evaluate|
 |```./trec_eval ../cran/QRelsCorrectedforTRECeval ../src/results.txt```|It will evaluate QRelsCorrectedforTRECeval with our queried results.txt file|
 |```./trec_eval -m map -m P.5,10,50 ../cran/QRelsCorrectedforTRECeval ../src/results.txt```| This command will map the specifi measures|
