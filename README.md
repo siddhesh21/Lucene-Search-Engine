@@ -20,20 +20,21 @@ Run following commands in Root user mode.
 
 |**Steps/Commands**| **Description**|
 |----------|-------------|
-|cd Lucene-Search-Engine/ | Go to the directory to get started|
-|mvn package| This command builds the maven project and packages them into a JAR, it will create a jar named "LuceneSE-0.0.1-SNAPSHOT.jar" compiled java file to execute different Analyzers and scoring functions|
+|```cd Lucene-Search-Engine/``` | Go to the directory to get started|
+|```mvn package```| This command builds the maven project and packages them into a JAR, it will create a jar named "LuceneSE-0.0.1-SNAPSHOT.jar" compiled java file to execute different Analyzers and scoring functions|
+|```./target/LuceneSE-0.0.1-SNAPSHOT.jar```|To execute jar file|
 |Choose Analyzer|1. English Analyzer|
 |Choose Scoring Model|1. BM25 |
 |comment|It  will create results.txt file in path Lucene-Search-Engine/src/results.txt|
-|tar -xvzf trec_eval_latest.tar.gz| Unzip trec_eval files|
-|cd trec_eval-9.0.7/ | change directory|
+|```tar -xvzf trec_eval_latest.tar.gz```| Unzip trec_eval files|
+|```cd trec_eval-9.0.7/```| change directory|
 |make|Use it to describe any task where some files must be updated automatically from others whenever the others change.| 
-|ls -lrt trec*|To see descriptive list of created trec_eval file to evaluate|
-| ./trec_eval ../cran/QRelsCorrectedforTRECeval ../src/results.txt|It will evaluate QRelsCorrectedforTRECeval with our queried results.txt file|
-|./trec_eval -m map -m P.5,10,50 ../cran/QRelsCorrectedforTRECeval ../src/results.txt| This command will map the specifi measures|
+|```ls -lrt trec*```|To see descriptive list of created trec_eval file to evaluate|
+|```./trec_eval ../cran/QRelsCorrectedforTRECeval ../src/results.txt```|It will evaluate QRelsCorrectedforTRECeval with our queried results.txt file|
+|```./trec_eval -m map -m P.5,10,50 ../cran/QRelsCorrectedforTRECeval ../src/results.txt```| This command will map the specifi measures|
 
-**Following OUTPUT is of**
-**English Analyzer and BM25Similarity Score**
+**Following OUTPUT is of**  
+**English Analyzer and BM25Similarity Score**  
 |**NAME**|**Output**|**Description**|
 |----|------|-----------|
 |runid|STANDARD|Name of the run (is the name given on the last field of the results file)|
@@ -47,20 +48,20 @@ Run following commands in Root user mode.
 |P_5|0.4284|Precision of the 5 first documents|
 |P_1000|0.078|Precision of the 1000 first documents|
 
-**Format of command** 
+**Format of command**   
 ```
 $ ./trec_eval [-q] [-m measure] qrel_file results_file
 ```
 The trec_eval is a tool used to evaluate rankings, either documents or any other information that is sorted by relevance. The evaluation is based on two files: The first, known as "qrels" (query relevances - QRelsCorrectedforTRECeval) lists the relevance judgements for each query. The second contains the rankings of documents returned by your RI system (results.txt file).
-**Viewing a specific measure**
+**Viewing a specific measure**  
 ```
 $ .\trec_eval -m map -m P.5,10 qrels_file results_file
 ```
-**Note** 
+**Note**   
 1. qrels file must be of "query-id  0  document-id  relevance" format.
 2. results.txt file must be of "query-id  Q0  document-id  rank  score  STANDARD" format.
 
-**Successfully created Lucene Search Engine by**
+**Successfully created Lucene Search Engine by**  
 1. Indexing
 2. Searching
 3. Quering
